@@ -375,15 +375,10 @@ public class GameCenter : Game
     protected virtual void EnterInitConfigState(fsm.State _from, fsm.State _to, fsm.Event _event)
     {
         Resources.UnloadUnusedAssets();
-        //ConfigMng configMng = ConfigMng.Instance;
-		
 		#region InitTable
-        //configMng.InitPetDataRefTable();
-
+        TableMng.intance.InitAll();
 		#endregion
-		
         //GameCenter.uIMng.GenGUI(GUIType.MESSAGE, true);
-		
         ResgistMsg();
     }
 
@@ -394,10 +389,10 @@ public class GameCenter : Game
 
     protected virtual void UpdateInitConfigState(fsm.State _curState)
     {
-        //if (ConfigMng.Instance.Pendings == 0)
-        //{
-        //    stateMachine.Send((int)EventType.LOGIN);
-        //}
+        if (TableMng.intance.LoadFinish)
+        {
+            stateMachine.Send((int)EventType.LOGIN);
+        }
     }
     #endregion
 

@@ -22,13 +22,7 @@ public class Game : FSMBase
 	/// </summary>
 	public bool isPlatform = false;
 
-	public bool isInsideTest = true;
-
-    public bool isDataEyePattern = false;
-
     public bool isNotNeedToMd5 = false;
-
-    public bool isIOS_JB = false;
     /// <summary>
     /// 唯一实例
     /// </summary>
