@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 
 public class TableMng{
     protected static TableMng tableMng = null;
@@ -34,6 +35,8 @@ public class TableMng{
     public void InitAll()
     { 
         InitTable<HeroTable>();
+        HeroTable tab = GetTable(typeof(HeroTable)) as HeroTable;
+        if (tab != null) Debug.Log(tab.infoDic.Count);
     }
 
     protected void InitTable<T>() where T : TableBase,new ()
@@ -72,18 +75,44 @@ public class TableMng{
 public class TableBase
 {
     protected Dictionary<int, Dictionary<string, string>> excelData = new Dictionary<int, Dictionary<string, string>>();
-    public void Init()
+    private string dataText = string.Empty;
+    public virtual void Init()
     {
-        LoadExcel(); 
+
     }
 
-    private void LoadExcel()
+    protected void LoadExcel(string excelName)
     {
         //load
+        string path = PathTool.GetFilePath("table/" + excelName, AssetPathType.StreamingAssetsPath);
+        Debug.Log("path:"+path);
+        dataText = File.ReadAllText(path);
+        Debug.Log(dataText);
         ReadExcel();
     }
     public virtual void ReadExcel()
-    { 
-    
+    {
+        dataText = dataText.Replace("\r", "");
+        string[] hList = dataText.Split('\n');
+        string tile = hList[1];
+        string[] titles = tile.Split('\t');
+        Debug.Log("titles:" + titles.Length);
+        for (int i = 2; i < hList.Length; i++)
+        {
+            string[] line = hList[i].Split('\t');
+            Debug.Log("line:" + line.Length);
+            Dictionary<string, string> lineKeyValue = new Dictionary<string, string>();
+            for (int j = 0; j < line.Length; j++)
+            {
+                if (string.IsNullOrEmpty(titles[j])) break;//排除空列
+                lineKeyValue[titles[j]] = line[j];
+            }
+            if (line.Length > 1)
+            {
+                if (!excelData.ContainsKey(int.Parse(line[0])))
+                    excelData.Add(int.Parse(line[0]), lineKeyValue);
+            }
+        }
+
     }
 }

@@ -1,0 +1,189 @@
+技能ID	技能名称	图标	技能描述	技能等级上限	技能每N级可提升一级	技能升级时金币消耗值	技能短描述	技能升级描述	技能类型	打击类型	法术初始值	法术权重	释放技能获得能量点	技能点消耗	施法距离	作用范围	初始CD	冷却时间	触发功能概率	功能1ID	功能1概率	功能1字段1	功能1字段2	功能1字段3	功能1字段4	功能2ID	功能2概率	功能2字段1	功能2字段2	功能2字段3	功能2字段4	属性类型	属性基础值	属性加成值	动作	被动触发类型	被动触发条件	被动触发概率
+id	name	icon	descrip	limitLv	heroPerLv	costGoldRule	shortDescrip	upLevelDescrip	type	hitDamageType	magicDamage	magicWeight	ReleaseSkillGetPower	maxSkillConsume	range	multiTargetRange	startCoolTime	coolTime	sProb	s1Id	s1Prob	s1Attr1	s1Attr2	s1Attr3	s1Attr4	s2Id	s2Prob	s2Attr1	s2Attr2	s2Attr3	s2Attr4	attrType	attrBase	attrRise	aniName	passiveTriggerType	passiveTriggerCondition	passiveTriggerProbability
+10100	普攻			70	1	0			物理伤害	0	0	0	0	0	1.5	0	0	0	0																attack1			
+10101	死亡缠绕	skill1113	释放一个亡魂，对前方敌人造成{magicDamage}伤害	70	1	skillwhitegold	对前方造成{magicDamage}伤害		物理伤害	0	58&58	0.5	0	0	6	1.5	3.5	18	2													attBase	12.89	12.89				
+10102	凛风冲击	skill1012	向前方冲锋，对碰到的敌人造成{magicDamage}点伤害,附带减速50%，持续3秒。	70	1	skillgreengold	冲锋前方{magicDamage}点伤害，同时减速		物理伤害	0	82&82	0.7	0	800	5	4	0	0	2	1	1	attSpeProp	1	3	-0.5	1	1	spe	1	3	0.5	attBase	13.12	13.12				
+10103	寒霜之剑	skill1013	攻击时有概率吸取敌方单体{s1Attr2}生命	70	1	skillgreengold	攻击时有概率吸取敌方单体{s1Attr2}生命		单体吸血	0	0	0	0	0	1.5	0	0	0	2	3	1	0.1	50&50	0.1		2	1	0.1	50&50	0.1	1	attBase	16.45	16.45	attack			
+10104	无光之盾	skill1016	变身时给自己施加一个无光之盾，可吸收{s1Attr2}点伤害，持续{s1Attr1}秒	70	1	skillgreengold	为自己施加伤害吸收护盾，减免{s1Attr2}点伤害		自身护盾	2	0	0	100	0	8	12	0	0	2	15	1	10	350&350	0	2							hpBase	350	350	s_attack2			
+10105	寒冰爆裂	skill1011	将寒冰剑插入地面，冻结周围的敌人{s1Attr1}秒，并造成{magicDamage}点伤害	70	1	skillgreengold	范围伤害{magicDamage}点，且冰冻1.5秒		物理伤害	0	30&30	0.25	50	0	3	4	0	0	2	14	1	1.5										attBase	22.5	22.5	attack2			
+10200	普攻			70	1	0			法术伤害	1	0	0	0	0	5.5	0	0	0	0																attack1			
+10201	闪电链	skill1021	释放一个跳跃{s1Attr2}次的闪电链，每次造成{magicDamage}点法术伤害	70	1	skillwhitegold	对多个敌人造成{magicDamage}点伤害		法术伤害	1	90&90	0.6	100	0	6	2	2.5	13	2	13	1	6	3									magicStr	27.69	27.69				
+10202	雷罚	skill1022	召唤雷罚，砸向前方目标造成{magicDamage}点伤害，并眩晕{s1Attr1}秒	70	1	skillgreengold	目标范围伤害{magicDamage}点，同时眩晕		法术伤害	1	130&130	0.85	0	800	8	4	0	0	2	4	1	0.5										magicStr	20.8	20.8				
+10203	落雷	skill1023	召唤落雷，对敌人造成{s1Attr2}点伤害,并眩晕{s1Attr1}秒	70	1	skillgreengold	召唤落雷对敌人造成{s1Attr2}伤害，同时眩晕		法术伤害	0	0	0	0	0	5.5	0	0	0	2	16	1	1	75&75	0.5		4	1	0.5				magicStr	30	30	attack			
+10204	静电力场	skill1025	变身时释放静电力场，对周围敌方单位造成{magicDamage}点伤害	70	1	skillgreengold	变身时对周身造成{magicDamage}伤害		法术伤害	1	103&103	0.7	0	0	999	8	0	0	2													magicStr	16.48	16.48	s_attack2			
+10300	普攻			70	1	0			法术伤害	1	0	0	0	0	6	0	0	0	0																attack1			
+10301	甘沐之风	skill1031	治疗周围友方单位，恢复共计{s1Attr2}点血量	70	1	skillwhitegold	回复全体友方{s1Attr2}血量		全体治疗	2	0	0.87	100	0	8	20	3.5	15	2	2	1	0.1	70&70	0.1	0							hpBase	700	700				
+10302	蛇息之声	skill1032	蛇息诅咒，对前方敌人造成{magicDamage}点法术伤害，并使其石化{s1Attr1}秒	70	1	skillgreengold	前方区域伤害{magicDamage}点，附带石化		法术伤害	1	97&97	1	80	800	6	8	0	0	2	14	1	2										magicStr	26.19	29.19				
+10303	迷恋香风	skill1033	对目标造成额外{s1Attr2}点魔法伤害	70	1	skillgreengold	对目标造成额外{s1Attr2}点魔法伤害		法术伤害	1	0	0	0	0	6	0	0	0	2	16	1	1	100&100	0.2								magicStr	50	50	attack			
+10304	甜甜甘风	skill1035	变身时恢复周围友方{s1Attr2}点血量	70	1	skillgreengold	变身时恢复周围友方{s1Attr2}点血量		全体治疗	2	0	0.9	0	0	999	20	0	0	2	2	1	0.1	72&72	0.1	0							hpBase	720	720	s_attack2			
+10305	石化	skill1131	石化目标{s1Attr1}秒，造成{magicDamage}点魔法伤害	70	1	skillgreengold	石化目标{s1Attr1}秒，造成{magicDamage}点魔法伤害		法术伤害	1	15&15	0.1	0	0	6	0	0	0	2	14	1	1&0.03										magicStr	87.08	6.25	attack3			
+10400	普攻			70	1	0			物理伤害	0	0	0	0	0	6	1	0	0	0																attack1			
+10401	榴弹炮	skill1041	发射一枚榴弹，对目标以及周围造成{magicDamage}点伤害	70	1	skillwhitegold	目标范围伤害{magicDamage}点		物理伤害	0	75&75	0.7	100	0	6	3	3.5	15	2													attBase	15	15				
+10402	狂轰滥炸	skill1042	火力全开，发射2枚导弹，对目标区域进行轰炸，造成{magicDamage}点伤害	70	1	skillgreengold	前方范围伤害{magicDamage}点		物理伤害	0	88&88	0.8	0	800	8	4	0	0	2													attBase	17.6	17.6				
+10403	穿刺	skill1043	攻击时有概率对敌人造成{s1Attr2}点额外伤害	70	1	skillgreengold	攻击时有概率额外造成{s1Attr2}伤害		物理伤害	0	0	0	0	0	6	1	0	0	0.2	16	1	0	42&42	0.33								attBase	13	13	attack			
+10404	高温喷射	skill1045	从机体喷出高温气浪，使周围的敌人受到灼烧效果，造成{s1Attr2}点总伤害，持续5秒	70	1	skillgreengold	变身时对周身造成{s1Attr2}伤害		法术伤害	1	0	0	0	0	999	8	0	0	2	3	1	5	120&120	1								attBase	12.48	12.48	s_attack2			
+10500	普攻			70	1	0			物理伤害	0	0	0	0	0	1.5	0	0	0	0																attack1			
+10501	残像拳	skill1051	快速对单个敌人连续攻击4次，造成{magicDamage}点伤害	70	1	skillwhitegold	单体伤害{magicDamage}点		物理伤害	0	123&123	1	100	0	2.6	0.1	3.5	13	2													attBase	18.92	18.92				
+10502	穿击炮	skill1052	发射穿击炮，对前方直线上的敌人造成{magicDamage}点伤害	70	1	skillgreengold	前方直线伤害{magicDamage}点		物理伤害	0	130&130	1.05	0	800	6	8	0	0	2													attBase	10.4	10.4				
+10503	重击	skill1053	攻击时有概率重击敌人造成{s1Attr2}点额外伤害，并眩晕1秒	70	1	skillgreengold	攻击时有概率触发{s1Attr2}伤害，同时眩晕		物理伤害	0	0	0	0	0	1.5	0	0	0	0.2	16	1	0	42&42	0.33		4	1	1				attBase	16.8	16.8	attack			
+10504	赛亚血统	skill1055	变身后额外增加自身{s1Attr4}物理攻击与物理防御	70	1	skillgreengold	变身期间增加自身{s1Attr4}物防		自身增益	1	0	0	0	0	999	1	0	0	2	1	1	attBase	0	20	1.1&0.005	1	1	defBase	0	25	1.1&0.005	hpBase	1050	337	s_attack2			
+10600	普攻			70	1	0			物理伤害	0	0	0	0	0	6	0	0	0	0																attack1			
+10601	封脉	skill1063	沉默目标圆形范围内的敌人{s1Attr1}秒，同时造成{magicDamage}点法术伤害	70	1	skillwhitegold	沉默前方敌人{s1Attr1}秒，并{magicDamage}点法术伤害		法术伤害	1	70&70	0.5	0	0	6	2	3	18	2	10	1	2										magicStr	23.3	23.3				
+10602	通灵蛇阵	skill1062	召唤5条蛇，百分比继承召唤者的属性，蛇群最长存在10秒，技能等级越高，蛇群攻击越高	70	1	skillgreengold	召唤5条小蛇协助战斗		召唤技能	2	0	0	0	800	10	0.1	0	0	2	11	1	10	1.5	5	hpBase&0.06&0&100,attBase&0.5&50&7,magicStr&1&0&0,defBase&0.8&0&0,wisBase&0.8&0&0							magicStr	14	100				
+10603	牺牲	skill1061	对敌人生命最低的目标释放{s2Attr2}点毒素，所有蛇向该目标自杀袭击	70	1	skillgreengold	毒素标记最弱目标，所有毒蛇向该自杀袭击		控制宝宝	1	0	0	100	0	8	0	0	0	2	17	1	1				3	1	3	75&75	0.7		magicStr	12.5	12.5	attack3			
+10604	生命吸取	skill1065	变身时，对一个敌人使用禁术，将敌人{s1Attr2}点血量转移给最虚弱的友方单体	70	1	skillgreengold	变身时将一个敌方{s1Attr2}点血量转移至最虚弱的友方		单体吸血	0	0	0	100	0	6	1	0	0	2	2	1	3	100&100	0.7	0	3	1	3	100&100	0.7		attBase	8.777777778	8.777777778	s_attack2			
+10605	通灵	skill2032	召唤1条蛇，百分比继承召唤者的属性，蛇群最长存在10秒，技能等级越高，蛇群攻击越高	70	1	skillgreengold	攻击时有几率召唤出1条小蛇助战		召唤技能	2	0	0	0	800	10	0.1	0	0	2	11	1	12	3	1	hpBase&0.08&0&100,attBase&0.5&50&7,magicStr&1&0&0,defBase&0.8&0&0,wisBase&0.8&0&0							magicStr	28	200	attack2			
+10700	普攻			70	1	0			物理伤害	0	0	0	0	0	1.5	0	0	0	0																attack1			
+10701	暗水	skill1071	将最远方敌人吸到身边，造成{magicDamage}点物理伤害，并使其沉默{s1Attr1}秒	70	1	skillwhitegold	抓取最远的敌人沉默，并造成一定{magicDamage}伤害		物理伤害	0	95&95	1.15	100	0	10	0.1	4	18	2	10	1	2										attBase	15.83	10.56				
+10702	暗穴道	skill1072	使用暗暗果实能力，将周围的敌人强制牵引过来，并造成{magicDamage}点物理伤害	70	1	skillgreengold	聚集周围的敌人，并造成{magicDamage}点伤害		物理伤害	0	70&70	0.85	0	800	1.5	6.5	0	0	0													attBase	16.8	16.8				
+10703	空震	skill1073	攻击时有概率触发空震，对敌人造成{s1Attr2}点额外伤害	70	1	skillgreengold	攻击时有概率额外造成{s1Attr2}伤害		物理伤害	0	0	0	0	0	1.5	0	0	0	0.2	16	1	0	38&38	0.45								attBase	15.2	15.2	attack			
+10704	释放	skill1075	通过释放暗物质，自身在变身状态下免伤率提升{s1Attr4}	70	1	skillgreengold	变身状态下免伤率提升{s1Attr4}		自身增益	2	0	0	0	0	999	0	0	0	2	1	1	harmReduceProp	0	30	0.1&0.003							harmReduceProp	0.034	0.001	s_attack2			
+10705	空震	skill1073	降低自身周围敌人的{s1Attr4}速度，造成{magicDamage}点物理伤害	70	1	skillgreengold	降低周围敌人的{s1Attr4}速度，并造成{magicDamage}伤害		物理伤害	0	38&38	0.45	0	0	1.5	3	0	0	2	1	1	attSpeProp	1	2	-0.4	1	1	spe	1	2	-0.4	attBase	28.5	19	attack2			
+10706	自愈	skill1054	吸取敌方单体{s1Attr2}生命	70	1	skillgreengold	吸取敌方单体{s1Attr2}生命		单体吸血	0	0	0	0	0	1.5	0	0	0	2	2	1	0.1	50&50	0.1	1	3	1	0.1	50&50	0.1		attBase	16.45	16.45	attack3			
+10800	普攻			70	1	0			法术伤害	1	0	0	0	0	5.5	0	0	0	0																attack1			
+10801	生命之花	skill1081	种下花朵种子，对周围敌人造成{magicDamage}伤害，对友方则恢复{s1Attr2}血量，持续5秒	70	1	skillwhitegold	持续范围伤害{magicDamage}点，持续治疗		全体治疗	1	90&90	0.6	100	0	6	3.5	3	13	2	2	0.99999	1	0&0	0.9	0							magicStr	32.2	32.2				
+10802	致命毒潭	skill1082	在前方生成一块毒潭，对毒潭内的敌人造成{magicDamage}点伤害，持续5秒	70	1	skillgreengold	范围伤害{magicDamage}点		法术伤害	1	150&150	1	0	800	8	7	0	0	2													magicStr	22.5	22.5				
+10803	植物毒素	skill1083	攻击时有概率使目标中毒，5秒内共造成{s1Attr2}点伤害	70	1	skillgreengold	攻击时有概率触发{s1Attr2}点持续伤害		持续伤害	1	0	0	0	0	5.5	0	0	0	0.2	3	1	5	75&75	1								attBase	16.2	16.2	attack			
+10804	毒性孢子	skill1085	向周围释放大量孢子，使接触到的敌人减速{s1Attr4}，持续{s1Attr3}秒	70	1	skillgreengold	变身时使敌方减速{s1Attr4}，持续{s1Attr3}秒		敌方减益	0	0	0	80	0	999	8	0	0	2	1	1	attSpeProp	1	8	-0.05&-0.01	1	1	spe	1	3	0.95&-0.01	attSpeProp	0.00667	0.00133	s_attack2			
+10900	普攻			70	1	0			物理伤害	0	0	0	0	0	2.5	0	0	0	0																attack1			
+10901	剑气斩	skill1091	快速挥刀产生剑气，对敌人造成{magicDamage}点伤害	70	1	skillwhitegold	造成直线区域{magicDamage}点伤害		物理伤害	0	120&120	1	100	0	6	6	2	13	2													attBase	18.46	18.46				
+10902	瞬移斩	skill1092	瞬移到周围血量最少的目标，造成{magicDamage}点伤害，攻速提升{s1Attr4}，持续3秒。	70	1	skillgreengold	瞬移至血量最少目标位置，造成{magicDamage}点伤害，短时间攻速翻倍		物理伤害	0	130&130	1.15	0	800	10	0	0	0	2	1	1	attSpeProp	0	3	3							attBase	20.8	20.8				
+10903	重斩	skill1093	攻击时有概率对敌人造成{s1Attr2}点伤害	70	1	skillgreengold	攻击时有概率造成{s1Attr2}额外伤害		物理伤害	0	0	0	0	0	2	0	0	0	2	16	1	0	60&60	1								attBase	30	30	attack			
+10904	武魂附体	skill1095	变身时触发武魂附体，免疫控制，并且闪避率增加{s1Attr4}，持续{s1Attr3}秒	70	1	skillgreengold	变身时免疫控制，闪避率增加{s1Attr4}，持续{s1Attr3}秒		自身增益	0	0	0	0	0	999	0.1	0	0	2	1	1	evaBaseProp	0	5	0.1&0.005							evaBaseProp	0.01	0.0005	s_attack2			
+11000	普攻			70	1	0			物理伤害	0	0	0	0	0	2.2	0	0	0	0																attack1			
+11001	影轮斩	skill1101	使用武器快速攻击两次前方范围敌人，共计造成{magicDamage}点物理伤害	70	1	skillwhitegold	前方范围伤害{magicDamage}点		物理伤害	0	135&135	1	0	0	4	4	3	12	2													attBase	20.25	20.25				
+11002	暗影分身	skill1102	创建一个永久存在的分身，百分比继承英雄属性。技能等级越高，分身攻击越高。	70	1	skillgreengold	创建一个永久存在的分身助战		召唤技能	2	0	0	80	800	10	4	0	0	2	11	1	99999	2	1	hpBase&0.2&0&0,attBase&0.5&100&100,magicStr&0&0&0,defBase&1&0&0,wisBase&1&0&0							hpBase	1200	1200				
+11003	灵魂剥夺	skill1103	攻击时有较低概率，额外造成{s1Attr2}点伤害	70	1	skillgreengold	攻击时有概率触发{s1Attr2}额外伤害		物理伤害	0	0	0	0	0	2.2	0	0	0	2	16	1	0	35&35	0.3								attBase	14	14	attack			
+11004	幻影身法	skill1105	变身后，通过灵动的幻影，使敌人无法准确攻击到自己，闪避率增加{s1Attr4}，持续{s1Attr3}秒	70	1	skillgreengold	变身时闪避率增加{s1Attr4}，持续{s1Attr3}秒		自身增益	1	0	0	0	0	999	0.1	0	0	2	1	1	evaBaseProp	0	3	0.05&0.01							evaBaseProp	0.0025	0.0005	s_attack2			
+11100	普攻			70	1	0			法术伤害	1	0	0	0	0	1.5	0	0	0	0																attack1			
+11101	灵魂屏障	skill1111	建立守护屏障，使全体队友获得控制免疫，持续5秒，且自身恢复{s1Attr2}点血量	70	1	skillwhitegold	全队免疫控制5秒，且自身持续恢复		全队免控	2	0	1.3	100	0	10	10	0	18	2	2	0.999	3	90&90	1	1							hpBase	500	500				
+11102	邪视光线	skill1112	将力量集中在双眼发射，对前方范围造成{magicDamage}点法术伤害	70	1	skillgreengold	前方大范围{magicDamage}点法术伤害		法术伤害	1	100&100	1.5	0	800	6	8	0	0	2													magicStr	12	12				
+11103	生命护盾	skill1113	创造一个吸收伤害的护盾，可抵挡{s1Attr2}总伤害，最长持续5秒	70	1	skillgreengold	创造一个伤害护盾，吸收{s1Attr2}伤害		自身护盾	1	0	0	30	0	1.5	0	0	0	0.2	15	1	5	50&50	1	2							hpBase	400	400	attack			
+11104	A.T力场	skill1115	发动A.T立场，免疫所受到的伤害，吸收上限{s1Attr2}点，持续{s1Attr1}秒	70	1	skillgreengold	变身时自身可吸收{s1Attr2}伤害		自身护盾	1	0	0	70	0	999	0.1	0	0	2	15	1	10	350&350	1	2							hpBase	350	350	s_attack2			
+11200	普攻			70	1	0			法术伤害	1	0	0	0	0	5.5	0	0	0	0																attack1			
+11201	豪火球术	skill1121	使用忍术喷出大量火焰，对前方敌人造成{magicDamage}点伤害	70	1	skillwhitegold	前方区域伤害{magicDamage}点		法术伤害	1	135&135	0.8	100	0	6	8	2.5	12	2													magicStr	33.75	33.75				
+11202	六道之柱	skill1122	召唤六道之柱，使区域内的敌人受到{magicDamage}点伤害，并失去战斗能力，持续{s1Attr1}秒	70	1	skillgreengold	目标范围伤害{magicDamage}点，同时眩晕		法术伤害	1	100&100	0.8	0	800	8	3.5	0	0	2	4	1	1.5										magicStr	30	30				
+11203	轮回印	skill1123	攻击时有概率对敌人额外造成{s1Attr2}点法术伤害，降低其{s2Attr4}法术抗性，持续{s2Attr3}秒	70	1	skillgreengold	攻击时有概率触发{s1Attr2}伤害，并减敌法抗		法术伤害	1	0	0	0	0	5.5	0	0	0	0.2	16	1	1	75&75	0.46		1	1	wisBase	1	3	0.8	magicStr	30	30	attack			
+11204	玉陨	skill1125	将求道玉发射出去，对周围敌人造成{magicDamage}点法术伤害	70	1	skillgreengold	变身时对周身造成{magicDamage}伤害		法术伤害	1	115&115	0.7	0	0	999	8	0	0	2													magicStr	18.4	18.4	s_attack2			
+11300	普攻			70	1	0			法术伤害	1	0	0	0	0	4.7	0	0	0	0																attack1			
+11301	GEASS	skill1131	对敌方单体额外造成{magicDamage}点法术伤害，并使其混乱，持续{s1Attr1}秒	70	1	skillwhitegold	单体伤害{magicDamage}点，同时混乱		法术伤害	1	120&120	0.8	100	0	8	0	3.5	15	2	5	1	3										magicStr	31.2	31.2				
+11302	强子炮	skill1132	对周围的敌方单位额外造成{magicDamage}点法术伤害	70	1	skillgreengold	目标范围伤害{magicDamage}点		法术伤害	1	130&130	0.88	0	800	6	6	0	0	2													magicStr	20.8	20.8				
+11303	黑色骑士	skill1133	攻击时有概率对敌人造成{s1Attr2}点法术伤害，并降低其{s2Attr4}攻击力，持续{s2Attr3}秒	70	1	skillgreengold	攻击时有概率触发{s1Attr2}伤害，同时减攻		法术伤害	1	0	0	0	0	4.7	0	0	0	0.2	16	1	1	60&60	0.4		1	1	attBase	1	3	0.8	magicStr	24	24	attack			
+11304	守护领域	skill1135	变身时，自身可吸收所有伤害最多{s1Attr2}点，持续{s1Attr1}秒	70	1	skillgreengold	变身时自身可吸收{s1Attr2}点伤害		自身护盾	1	0	0	0	0	999	0.1	0	0	2	15	1	10	200&200	1	2							hpBase	200	200	s_attack2			
+11400	普攻			70	1	0			物理伤害	0	0	0	0	0	1.5	0	0	0	0																attack1			
+11401	白魔法	skill1141	激发自身能量，5秒内为自身恢复共计{s1Attr2}点血量	70	1	skillwhitegold	5秒内回复自身{s1Attr2}血量		自身治疗	2	0	1.3	100	0	8	0.1	3	18	2	2	1	5	90&90	1	1							hpBase	500	500				
+11402	黑魔法	skill1142	对前方区域造成{magicDamage}点法术伤害，并降低其中敌人30%法强，持续10秒	70	1	skillgreengold	前方区域{magicDamage}点伤害，并降低敌方30%法强		法术伤害	1	70&70	1	0	800	3	3	0	0	2	1	1	magicStr	1	10	0.7							magicStr	16.8	16.8				
+11403	魔法禁锢	skill1143	攻击时有概率沉默敌方{s1Attr1}秒	70	1	skillgreengold	攻击时有概率沉默敌方{s1Attr1}秒		单体控制	0	0	0	30	0	1.5	0	0	0	0.2	10	1	1&0.04										hpBase	250	250	attack			
+11404	魔法盾	skill1145	变身期时给自身施加一个法术护盾，可吸收{s1Attr2}点法术伤害，最长持续20秒	70	1	skillgreengold	变身时触发法术护盾，吸收{s1Attr2}点法术伤害		自身护盾	2	0	0	0	0	999	0.01	0	0	2	15	1	20	500&500	1	1							hpBase	500	500	s_attack2			
+11500	普攻			70	1	0			物理伤害	0	0	0	0	0	2	0	0	0	0																attack1			
+11501	八刀一闪	skill1151	以肉眼不可见的速度朝前方范围内的敌人斩出八刀，共计造成{magicDamage}点物理伤害	70	1	skillwhitegold	前方范围伤害{magicDamage}点		物理伤害	0	60&60	0.45	100	0	3	3	2.5	15	2													attBase	12	12				
+11502	居合斩	skill1152	施展居合道，快速挥出两片刀光，对前方范围内的敌人造成{magicDamage}点物理伤害	70	1	skillgreengold	前方范围伤害{magicDamage}点		物理伤害	0	85&85	0.65	0	800	3	10	0	0	2													attBase	13.6	13.6				
+11503	强攻	skill1153	攻击时有较低概率增加自身{s1Attr4}物理攻击，持续3秒	70	1	skillgreengold	攻击时有较低概率增加自身{s1Attr4}物攻		自身增益	0	0	0	0	0	2	0	0	0	0.1	1	1	attBase	0	3	1.01&0.01							attBase	15.26	20.8	attack			
+11504	无心天使	skill1155	变身时对周身范围内的敌人额外造成{magicDamage}点物理伤害，并降低其物理防御{s1Attr4}，持续{s1Attr3}秒	70	1	skillgreengold	变身时周身{magicDamage}伤害，同时减敌物防		物理伤害	0	70&70	0.55	0	0	3	8	0	0	2	1	1	defBase	1	3	0.5&0							attBase	11.2	11.2	s_attack2			
+11600	普攻			70	1	0			法术伤害	1	0	0	0	0	5.5	0	0	0	0																attack1			
+11601	炎弹	skill1161	召唤3颗炎弹落向前方区域， 每颗炎弹可造成{magicDamage}点法术伤害	70	1	skillwhitegold	单体伤害{magicDamage}点		法术伤害	1	132&132	0.9	100	0	6	2	4	12	2	16	1	1	0&0	0								magicStr	22	22				
+11602	邪神风暴	skill1162	对前方所有敌人造成{magicDamage}点法术伤害，并将其击退	70	1	skillgreengold	前方区域伤害{magicDamage}点，同时击退		法术伤害	1	100&100	0.7	0	800	6	2	0	0	2													magicStr	16	16				
+11603	恶作剧	skill1163	攻击时有概率对目标造成{s1Attr2}点持续伤害，持续{s1Attr1}秒	70	1	skillgreengold	攻击时有概率触发{s1Attr2}点持续伤害		持续伤害	1	0	0	0	0	5.5	0	0	0	0.2	3	1	5	80&80	0.99								attBase	17.28	17.28	attack			
+11604	巨人血统	skill1165	伴随着火焰化身巨人，并对周围所有敌人造成{magicDamage}点法术伤害	70	1	skillgreengold	变身时对周身造成{magicDamage}伤害		法术伤害	1	103&103	0.7	0	0	999	8	0	0	2													magicStr	16.48	16.48	s_attack2			
+11700	普攻			70	1	0			法术伤害	1	0	0	0	0	5.5	0	0	0	0																attack1			
+11701	影子禁锢	skill1171	对单体目标造成{magicDamage}点法术伤害，并将其禁锢，持续5秒	70	1	skillwhitegold	单体伤害{magicDamage}点，同时禁锢		法术伤害	1	87&87	1	100	0	8	0.1	4.5	18	2	4	1	5										magicStr	19.3	19.3				
+11702	飞散蝙蝠	skill1172	对前方区域内的敌人造成{magicDamage}点法术伤害，并降低其防御{s1Attr4}，持续{s1Attr3}秒	70	1	skillgreengold	前方区域伤害{magicDamage}点，同时减防		法术伤害	1	105&105	1.2	0	800	6	8	0	0	2	1	1	wisBase	1	15	0.5&0	1	1	defBase	1	15	0.5&0	magicStr	16.8	16.8				
+11703	影切	skill1173	攻击时有概率降低敌人{s1Attr4}物防和{s2Attr4}免伤，持续{s1Attr3}秒	70	1	skillgreengold	攻击时有概率降低敌方{s1Attr4}物防和{s2Attr4}免伤		敌方减益	1	0	0	30	0	5.5	0	0	0	2	1	1	defBase	1	2	0.99&-0.01	1	1	harmReduceProp	1	2	-0.01&-0.01	attBase	3	10.8	attack			
+11704	影武者	skill1175	变身期间，暗影之主的身体在影子和本体中不断转换，增加自身{s1Attr4}免伤率	70	1	skillgreengold	变身期间增加自身{s1Attr4}免伤率		自身增益	0	0	0	80	0	999	0.1	0	0	2	1	1	harmReduceProp	0	20	0.01&0.005							harmReduceProp	0.005	0.0025	s_attack2			
+11800	普攻			70	1	0			法术伤害	1	0	0	0	0	4	0	0	0	0																attack1			
+11801	混沌之剑	skill1181	将混沌魔法集中在一点释放，被该招式击中的目标会受到{magicDamage}点法术伤害	70	1	skillgreengold	前方区域伤害{magicDamage}点		法术伤害	1	100&100	0.66	0	0	8	1.5	3	12	2													magicStr	12.8	12.8				
+11802	时空扭曲	skill1182	使用混沌魔法创建一个时空力场，对该区域内的敌人最大造成{magicDamage}点法术伤害，同时大幅降低敌人的速度，持续5秒	70	1	skillwhitegold	对范围内敌人累积造成{magicDamage}点伤害，并大幅减缓他们的速度持续5秒		法术伤害	1	160&160	1.2	100	200	4	5	0	0	2	1	1	attSpeProp	1	1	-0.7	1	1	spe	1	1	0.3	magicStr	33.33	33.33				
+11803	意念控制	skill1183	使用意念控制击退目标，额外造成{s1Attr2}法术伤害，并减移速{s1Attr3}秒	70	1	skillgreengold	攻击有概率造成{s1Attr2}额外伤害，击退并减移速{s1Attr3}秒		法术伤害	1	0	0	0	0	4	0	0	0	2	16	1	1	60&60	0.4		1	1	spe	1	2.5	0.2	magicStr	30	30	attack			
+11804	能量力场	skill1185	时空扭曲的另一个用法，就是创造一个只影响自己的加速能量力场，提升自己{s1Attr4}攻速,持续{s1Attr3}秒	70	1	skillgreengold	变身时提升{s1Attr4}攻速，持续{s1Attr3}秒		法术伤害	1	103&103	0.5	0	0	999	0	0	0	2	1	1	attSpeProp	0	10	0.1&0.01							attSpeProp	0.001	0.001	s_attack2			
+11900	普攻			70	1	0			物理伤害	0	0	0	0	0	8	0	0	0	0																attack1			
+11901	多重射击	skill1191	射出五支霜冻之箭，每支箭对敌人造成{magicDamage}点物理伤害，并降低{s1Attr4}攻速，持续{s1Attr3}秒	70	1	skillwhitegold	前方区域伤害{magicDamage}点，同时减速		物理伤害	0	65&65	0.5	50	0	8	1	3	15	2	1	1	attSpeProp	1	3	-0.5							attBase	17.3	17.3				
+11902	万箭齐发	skill1192	对目标周围所有敌人造成{magicDamage}点物理伤害	70	1	skillgreengold	目标区域伤害{magicDamage}点		物理伤害	0	102&102	0.8	0	800	8	5	0	0	2													attBase	16.3	16.3				
+11903	黑暗之箭	skill1193	提升自身{s1Attr4}攻速，持续{s1Attr3}秒	70	1	skillgreengold	提升自身{s1Attr4}攻速，持续{s1Attr3}秒		自身增益	2	0	0	100	0	8	0	0	0	2	1	1	attSpeProp	0	4	0.1&0.005							attSpeProp	0.001	0.001	attack2			
+11904	游侠意志	skill1195	变身时增加{s1Attr4}物攻，持续至变身结束	70	1	skillgreengold	变身时增加{s1Attr4}物攻，持续至变身结束		自身增益	2	0	0	100	0	8	0	0	0	2	1	1	attBase	0	30	1.05&0.01							attBase	15	20	s_attack2			
+11905	迷雾之箭	skill1111	对前方敌人造成{magicDamage}点物理伤害，并降低{s1Attr4}命中，持续{s1Attr3}秒	70	1	skillgreengold	降低目标周围敌人{s1Attr4}命中，并造成{magicDamage}点伤害		物理伤害	0	30&30	0.3	50	0	8	5	0	0	2	1	1	hitProp	1	2	-0.2&-0.01	1	1	hit	1	3	0&0	attBase	14.4	14.4	attack3			
+12000	普攻			70	1	0			法术伤害	1	0	0	0	0	5	0	0	0	0																attack1			
+12001	幻灵球	skill1201	释放一个幻灵球，对碰到幻灵球的敌方造成{magicDamage}点魔法伤害	70	1	skillwhitegold	幻灵球对敌人造成{magicDamage}伤害		法术伤害	1	90&90	0.6	0	0	5	2	3	12	2													magicStr	22.5	22.5				
+12002	重力魔球	skill1202	召唤重力魔球造成{magicDamage}点魔法伤害，并使周围目标无法移动	70	1	skillgreengold	造成{magicDamage}点伤害，控制移动		法术伤害	1	125&125	0.85	0	800	6	3.5	0	0	2													magicStr	20	20				
+12003	狐媚	skill1203	攻击时有概率对目标造成{s1Attr2}点法术伤害，并削弱目标{s2Attr4}法抗，持续{s2Attr3}秒	70	1	skillgreengold	攻击时有概率造成{s1Attr2}伤害，同时减敌法抗		法术伤害	1	0	0	0	0	5	0	0	0	0.2	16	1	1	73&73	0.5		1	1	wisBase	1	3	0.8	magicStr	29	29	attack			
+12004	妖狐之火	skill1205	狐仙通过摩擦尾巴，产生高温的狐之火，对周围造成{magicDamage}点魔法伤害	70	1	skillgreengold	变身时对周围造成{magicDamage}范围伤害		法术伤害	1	103&103	0.7	0	0	8	8	0	0	2													magicStr	16.48	16.48	s_attack2			
+12100	普攻			70	1	0			物理伤害	0	0	0	0	0	1.8	0	0	0	0																attack1			
+12101	地刺突袭	skill1211	召唤地刺对区域内的敌人造成{magicDamage}点物理伤害，附带眩晕，持续{s1Attr1}秒	70	1	skillwhitegold	范围伤害{magicDamage}点，同时眩晕		物理伤害	0	98&98	0.8	100	0	6	3	1	12	2	4	1	3										attBase	19.6	19.6				
+12102	恐怖翼刃	skill1212	利用恐怖翼刃对单体敌人造成{magicDamage}物理伤害	70	1	skillgreengold	单体伤害{magicDamage}点		物理伤害	0	134&134	1.1	0	800	2.5	1	0	0	2													attBase	10.72	10.72				
+12103	虫族壁垒	skill1213	激活虫族壁垒，为自己创建一个伤害护盾，吸收{s1Attr2}点伤害	70	1	skillgreengold	为自己创造一个护盾吸收{s1Attr2}伤害		自身护盾	0	0	0	30	0	1.8	0	0	0	0.2	15	1	5	30&30	1	2							hpBase	300	300	attack			
+12104	虫族之心	skill1215	变身时获得虫族之心的力量，增加自身{s1Attr4}攻速，直到变身结束	70	1	skillgreengold	变身期间增加{s1Attr4}攻速		自身增益	2	0	0	80	0	999	0.1	0	0	2	1	1	attSpeProp	0	20	0.01&0.005							attSpeProp	0.005	0.0025	s_attack2			
+12200	普攻			70	1	0			法术伤害	1	0	0	0	0	5	0	0	0	0																attack1	4		1
+12201	小丑暗箱	skill1221	召唤小丑暗箱嘲讽敌人，小丑暗箱可百分比继承召唤者属性，持续10秒.技能等级越高召唤物生命越高	70	1	skillwhitegold	召唤小丑暗箱嘲讽周围敌人,持续10秒		召唤技能	0	0	0	100	0	8	0.1	3	12	2	11	1	10	0.1	1	hpBase&0.2&500&500,attBase&0&0&0,magicStr&0&0&10,defBase&1&0&0,wisBase&1&0&0							hpBase	4166	4166				
+12202	恐怖榴弹	skill1222	对目标周围所有敌人造成{magicDamage}物理伤害，并眩晕{s1Attr1}秒	70	1	skillgreengold	目标区域伤害{magicDamage}点，同时眩晕		物理伤害	0	83&83	1	0	800	6	3	0	0	2	4	1	2										attBase	17.26	17.26				
+12203	嬉皮弹药	skill1223	攻击时有概率将目标沉默，并削弱目标{s2Attr4}法抗，持续{s2Attr3}秒	70	1	skillgreengold	攻击时有概率沉默并减弱{s2Attr4}法抗		敌方减益	1	0	0	30	0	5	0	0	0	0.1	10	1	2				1	1	wisBase	1	3	0.9&-0.01	attBase	28	28	attack			
+12204	侵略狂想曲	skill1225	变身时，使附近友方获得{s1Attr4}物攻与{s2Attr4}攻速增加，持续{s1Attr3}秒	70	1	skillgreengold	变身时增加友方{s1Attr4}物攻与攻速		友方增益	2	0	0	80	0	999	10	0	0	2	1	1	attBase	0	5	1.1&0.005	1	1	attSpeProp	0	5	0.1&0.005	attBase	20	10	s_attack2			
+12300	普攻			70	1	0			物理伤害	0	0	0	0	0	1.5	0	0	0	0																attack1			
+12301	强能冲拳	skill1231	使用冲拳，对敌人单体造成{magicDamage}物理伤害并击退	70	1	skillwhitegold	单体{magicDamage}伤害并击退		物理伤害	0	98&98	1.05	100	0	6	1	0	15	2													attBase	13.07	13.07				
+12302	盾击	skill1232	对前方小范围造成{magicDamage}物理伤害	70	1	skillgreengold	小范围{magicDamage}伤害		物理伤害	0	112&112	1.2	0	800	3	2.5	0	0	2													attBase	13.44	13.44				
+12303	肌体冷冻	skill1233	攻击时有概率增加自身{s1Attr4}物理防御，持续{s1Attr3}秒	70	1	skillgreengold	攻击时有概率增加自身{s1Attr4}物防		自身增益	0	0	0	0	0	1.5	0	0	0	0.2	1	1	defBase	0	3	1.1&0.01							defBase	10	17.34	attack			
+12304	坚盾守护	skill1235	变身时，为附近所有友方加持护盾，护盾吸收{s1Attr2}伤害，持续{s1Attr1}秒	70	1	skillgreengold	变身时为队员加盾吸收{s1Attr2}伤害		全队护盾	2	0	0	80	0	999	20	0	0	2	15	1	10	250&250	0	2							hpBase	375	375	s_attack2			
+12400	普攻			70	1	0			物理伤害	0	0	0	0	0	1.5	0	0	0	0																attack1			
+12401	尖刺防御	skill1241	库巴纵身一跃缩进壳内，免疫伤害，并对周围射出针刺造成{magicDamage}物理伤害，并减少敌方50%移动速度，持续3秒	70	1	skillwhitegold	免疫3秒，造成{magicDamage}伤害并降低敌方移动速度		物理伤害	0	50&50	0.6	100	0	3	3	2.5	18	2	9	1	3	2	1		1	1	spe	1	3	0.5	attBase	22.22	22.22				
+12402	潮汐	skill1242	召唤潮汐对周围造成{magicDamage}物理伤害，并降低敌方30%攻击速度，持续3秒	70	1	skillgreengold	周身造成{magicDamage}伤害并降低其30%攻击速度		物理伤害	0	98&98	1.1	0	800	3	3	0	0	2	1	1	attSpeProp	1	3	-0.7							attBase	23.52	23.52				
+12403	龟甲强化	skill1243	攻击时有概率增加自身{s1Attr4}物理防御，持续{s1Attr3}秒	70	1	skillgreengold	攻击时有概率增加自身{s1Attr4}物防		自身增益	0	0	0	30	0	1.5	0	0	0	0.2	1	1	defBase	0	3	1.15&0.01							defBase	25	45	attack			
+12404	破甲嘲讽	skill1245	变身时，嘲讽周围敌人且自身伤害减免50%，持续3秒，且对周围目标造成{magicDamage}物理伤害	70	1	skillgreengold	变身时嘲讽众人且造成{magicDamage}伤害		物理伤害	0	80&80	0.9	10	0	999	3	0	0	2	7	1	3	0.5									attBase	7.2	7.2	s_attack2			
+12500	普攻			70	1	0			物理伤害	0	0	0	0	0	1.5	0	0	0	0																attack1			
+12501	暗影冲锋	skill1181	向前方冲锋击退敌方，并造成{magicDamage}点物理伤害,。	70	1	skillwhitegold	向前冲锋，造成{magicDamage}点伤害		物理伤害	0	82&82	1.5	100	0	5	2.5	0	12	2													attBase	13.67	13.67				
+12502	烈焰之环	skill1252	大范围释放火焰，对周身敌人造成{magicDamage}点物理伤害，附带5秒{s1Attr2}点灼烧伤害	70	1	skillgreengold	周身{magicDamage}点伤害，同时持续掉血		物理伤害	0	110&110	2	0	800	6	7	0	0	2	3	1	5	45&45	1								attBase	33	33				
+12503	魔界火焰	skill1253	攻击时有概率对目标造成{s1Attr2}灼烧伤害，持续{s1Attr1}秒	70	1	skillgreengold	攻击时有概率造成{s1Attr2}持续伤害		持续伤害	0	0	0	0	0	1.5	0	0	0	0.2	3	1	3	50&50	1								attBase	10.8	10.8	attack			
+12504	骨牢地狱	skill1255	从地底召唤骨刺，对敌人造成{magicDamage}点物理伤害，并眩晕{s1Attr1}秒	70	1	skillgreengold	变身时对周围造成{magicDamage}点伤害，同时眩晕		物理伤害	1	69&69	0.6	0	0	999	8	0	0	2	4	1	2										attBase	11.04	11.04	s_attack2			
+12600	普攻			70	1	0			物理伤害	0	0	0	0	0	5	0	0	0	0																attack1			
+12601	起爆黏土	skill1261	制造一只黏土小鸟，向敌方飞行，在目标上空爆炸，对范围内敌人造成{magicDamage}点物理伤害	70	1	skillwhitegold	引爆黏土小鸟，造成{magicDamage}点伤害		物理伤害	0	50&50	0.45	100	0	6	3.5	2.5	12	2													attBase	15	15				
+12602	C4迦楼罗	skill1262	制造一个和自身一模一样的巨大人偶，2秒后爆炸，对周围区域造成{magicDamage}点物理伤害	70	1	skillgreengold	释放自爆人偶，造成{magicDamage}点伤害		物理伤害	0	98&98	0.75	0	800	6	4	0	0	2													attBase	15.68	15.68				
+12603	土隐龙之术	skill1263	攻击时有概率对目标造成{s2Attr4}减速效果，持续{s1Attr3}秒	70	1	skillgreengold	攻击时有概率造成{s2Attr4}攻击减速		敌方减益	0	0	0	30	0	5	0	0	0	0.1	1	1	attSpeProp	1	3	-0.01&-0.01	1	1	spe	1	3	0.99&-0.01	attSpeProp	0.003	0.003	attack			
+12604	自爆	skill1265	变身时，对自身周围所有敌人造成{magicDamage}点物理伤害	70	1	skillgreengold	变身时对周围造成{magicDamage}点伤害		物理伤害	0	70&70	0.6	0	0	8	8	0	0	2													attBase	8.4	8.4	s_attack2			
+12700	普攻			70	1	0			法术伤害	1	0	0	0	0	5	0	0	0	0																attack1			
+12701	破坏光束	skill1271	释放出一个光波，对前方直线上的敌人造成{magicDamage}点法术伤害	70	1	skillwhitegold	前方直线伤害{magicDamage}点		法术伤害	1	105&105	0.7	100	0	8	15	3.5	20	2													magicStr	21	21				
+12702	元气斩	skill1272	手中聚集能量，变为巨刃向前方丢出去，再将之收回来，对路径上的目标造成{magicDamage}点法术伤害	70	1	skillgreengold	前方直线伤害{magicDamage}点		法术伤害	1	150&150	1	0	800	8	2	0	0	2													magicStr	36	36				
+12703	连续波	skill1273	攻击时有概率对目标造成{s1Attr2}法术伤害	70	1	skillgreengold	攻击时有概率造成{s1Attr2}点伤害		法术伤害	1	0	0	0	0	5	0	0	0	0.2	16	1	1	75&75	0.5								magicStr	30	30	attack			
+12704	战争怒吼	skill1275	变身时，使附近友方获得{s1Attr4}攻速增加，持续{s1Attr3}秒	70	1	skillgreengold	变身时增加友方{s1Attr4}攻速		友方增益	2	0	0	0	0	999	12	0	0	2	1	1	attSpeProp	0	10	0.1&0.005							attSpeProp	0.017	0.00083	s_attack2			
+12800	普攻			70	1	0			法术伤害	1	0	0	0	0	5.5	0	0	0	0																attack1			
+12801	纸盾牌	skill1281	给友方所有单位施加一个纸盾牌，可吸收{s1Attr2}点伤害，持续{s1Attr1}秒	70	1	skillwhitegold	为友方施加伤害吸收盾牌，减免{s1Attr2}点伤害		团队护盾	2	0	0	100	0	8	30	1	15	2	15	1	10	180&180	0	2							hpBase	600	600				
+12802	式纸之舞	skill1282	为附近的友方回复{s1Attr2}点血量，持续{s1Attr1}秒	70	1	skillgreengold	群体回复{s1Attr2}点血量		全体治疗	2	0	1	0	800	8	12	0	0	2	2	1	3	100&100	1	0							hpBase	400	400				
+12803	纸手里剑	skill1283	攻击时有概率对目标造成{s1Attr2}法术伤害	70	1	skillgreengold	攻击时有概率造成{s1Attr2}点伤害		法术伤害	1	0	0	0	0	5.5	0	0	0	0.2	16	1	1	50&50	0.5								magicStr	20	20	attack			
+12804	纸分身术	skill1285	变身时，使附近友方恢复{s1Attr2}点血量	70	1	skillgreengold	变身时恢复友方{s1Attr2}点血量		全体治疗	2	0	0.8	0	0	999	12	0	0	2	2	1	0.3	80&80	0.3	0							hpBase	320	320	s_attack2			
+12900	普攻			70	1	0			物理伤害	0	0	0	0	0	1.5	0	0	0	0																attack1			
+12901	柳之舞	skill1291	以灵活身法迅速接近，用骨头为武器配合体术，对前方敌人造成{magicDamage}点物理伤害	70	1	skillwhitegold	前方范围{magicDamage}点伤害		物理伤害	0	93&93	1	100	0	5	3.5	0	15	2													attBase	12.4	12.4				
+12902	早蕨之舞	skill1292	控制骨刃疯狂生长，刺穿周围敌人造成{magicDamage}点伤害，并且晕眩{s1Attr1}秒	70	1	skillgreengold	周身{magicDamage}点伤害，同时眩晕		物理伤害	0	100&100	1.1	0	800	4	4.5	0	0	2	4	1	3										attBase	36	36				
+12903	尸骨脉	skill1293	攻击时有概率让骨脉强化，吸收{s1Attr2}点物理伤害，持续{s1Attr1}秒	70	1	skillgreengold	创建一个护盾吸收{s1Attr2}物理伤害		自身护盾	0	0	0	30	0	1.5	0	0	0	0.1	15	1	3	50&50	1	0							hpBase	400	400	attack			
+12904	地之咒印	skill1295	变身期间，自身伤害免疫3秒，并增加友方{s2Attr4}攻速，持续5秒	70	1	skillgreengold	变身时自身免疫并增加友方{s2Attr4}攻速		友方增益	2	0	1.5	80	0	999	12	0	0	2	9	1	3	2	1		1	1	attSpeProp	0	5	0.1&0.005	attSpeProp	0.0083	0.00042	s_attack2			
+13000	普攻			70	1	0			物理伤害	0	0	0	0	0	5	0	0	0	0																attack1			
+13001	线锯切割	skill1301	发射五根由地面衍生至空中的钢线，每根钢线可造成{magicDamage}点物理伤害	70	1	skillwhitegold	前方区域伤害{magicDamage}点		物理伤害	0	80&80	0.6	100	0	6	1.5	3.5	15	2													attBase	21.33	21.33				
+13002	荒浪白线	skill1302	对前方区域敌人造成{magicDamage}点物理伤害并缠绕对方，持续{s1Attr1}秒	70	1	skillgreengold	目标区域伤害{magicDamage}点，同时缠绕		物理伤害	0	93&93	0.7	0	800	6	8	0	20	2	4	1	2										attBase	14.88	14.88				
+13003	线线果实	skill1303	攻击时有概率对目标造成{s1Attr2}物理伤害	70	1	skillgreengold	攻击时有概率造成{s1Attr2}点伤害		物理伤害	0	0	0	0	0	5	0	0	0	0.2	16	1	0	30&30	0.24								attBase	12	12	attack			
+13004	Joker	skill1305	变身时增加{s1Attr4}暴击率，持续{s1Attr3}秒	70	1	skillgreengold	变身时增加{s1Attr4}暴击率，持续{s1Attr3}秒		自身增益	2	0	0	80	0	999	1	0	0	2	1	1	criProp	0	20	0.01&0.003							criProp	0.005	0.0015	s_attack2			
+13100	普攻			70	1	0			法术伤害	1	0	0	0	0	6	0	0	0	0																attack1			
+13101	消极幽灵	skill1311	释放三个消极幽灵，每个幽灵可造成{magicDamage}点魔法伤害	70	1	skillwhitegold	前方区域伤害{magicDamage}点		法术伤害	1	90&90	0.6	0	0	8	1.5	0	15	0													magicStr	28.8	28.8				
+13102	神风炸弹	skill1312	释放一个神风炸弹，对目标区域造成{magicDamage}点魔法伤害	70	1	skillgreengold	前方区域伤害{magicDamage}点		法术伤害	1	135&135	0.9	0	800	8	6	0	0	0													magicStr	21.6	21.6				
+13103	僵尸指挥官	skill1313	攻击时有概率对敌人造成{s1Attr2}点法术伤害，并沉默目标2秒	70	1	skillgreengold	攻击时有概率触发{s1Attr2}伤害，并沉默		法术伤害	1	0	0	0	0	6	0	0	0	0.2	16	1	1	75&75	0.5		10	1	1				magicStr	30	30	attack			
+13104	幽灵幽灵	skill1132	变身时，对自身周围所有敌人造成{magicDamage}点法术伤害，附带{s1Attr4}减速，持续2秒	70	1	skillgreengold	变身时对周围造成{magicDamage}点伤害，附带减速		法术伤害	1	105&105	0.7	0	0	999	8	0	0	2	1	1	attSpeProp	1	2	-0.4	1	1	spe	1	2	-0.4	magicStr	16.8	16.8	s_attack2			
+13105	幽灵分身	skill1315	对目标圆形范围造成{magicDamage}点魔法伤害,并沉默{s1Attr1}秒	70	1	skillgreengold	对目标圆形范围造成{magicDamage}点魔法伤害,并沉默{s1Attr1}秒		法术伤害	1	50&50	0.4	0	0	6	3	0	0	2	10	1	2										magicStr	30	30	attack2			
+13106	僵尸指挥官	skill1313	对目标造成{magicDamage}点法术伤害，并减速目标{s1Attr3}秒	70	1	skillgreengold	对目标造成{magicDamage}点法术伤害，并减速目标{s1Attr3}秒		法术伤害	1	135&135	0.9	0	0	6	0	0	0	2	1	1	spe	1	2	-0.4	1	1	attSpe	1	2	-0.4	magicStr	30	30	attack3			
+13200	普攻			70	1	0			法术伤害	1	0	0	0	0	5.5	0	0	0	0																attack1			
+13201	召唤小鬼	skill1321	召唤2只小鬼，小鬼百分比继承召唤者属性，持续20秒,技能等级越高召唤物伤害越高	70	1	skillwhitegold	召唤出2只远程攻击小鬼,持续20秒		召唤技能	2	0	0	100	0	10	0.1	0	12	2	11	1	20	4	2	hpBase&0.1&0&0,attBase&0&0&0,magicStr&0.3&80&80,defBase&1&0&0,wisBase&1&0&0							magicStr	40	40				
+13202	地狱炎魔	skill1322	召唤地狱炎魔，炎魔百分比继承召唤者属性，持续10秒,技能等级越高召唤物血量越高	70	1	skillgreengold	召唤1只近战炎魔宝宝,持续10秒		召唤技能	2	0	0	80	800	10	4	0	0	2	11	1	10	0.1	1	hpBase&0.2&500&500,attBase&0.3&0&0,magicStr&0.5&0&10,defBase&1&0&0,wisBase&1&0&0							hpBase	1200	1200				
+13203	痛苦诅咒	skill1323	攻击时有概率对敌人造成{s1Attr2}点伤害，持续{s1Attr1}秒	70	1	skillgreengold	攻击时有概率触发{s1Attr2}点伤害，持续{s1Attr1}秒		持续伤害	1	0	0	0	0	5.5	0	0	0	0.2	3	1	3	100&100	1								attBase	21.6	21.6	attack			
+13204	死亡缠绕	skill1325	变身时，对自身周围所有敌人造成{s1Attr2}点法术伤害，并回复自身{s2Attr2}点血量，持续{s1Attr1}秒	70	1	skillgreengold	变身时造成{s1Attr2}点范围伤害，回复自身{s2Attr2}点血量		法术伤害	2	0	0	0	0	999	8	0	0	2	3	1	3	120&120	1		2	1	3	57&57	1	1	attBase	22.9	22.9	s_attack2			
+90001	复苏之歌	icon_skill01	回复全体友方{s1Attr2}点血量（每场战斗只可使用一次）	0	0	0	回复全体友方血量	每升一级回复血量+633	全体治疗	2	0	0	0	0	999	0	0	0	2	2	1	0.3	2470&633	0.3	0													
+90002	振奋之力	icon_skill02	增加全体友方{s1Attr4}攻击与法强，持续5秒（每场战斗只可使用一次）	0	0	0	增加友方攻击与法强	每升一级效果+5%	友方增益	2	0	0	0	0	999	0	0	0	2	1	1	attBase	0	5	1.05&0.05	1	1	magicStr	0	5	1.05&0.05							
+90003	钢铁之躯	icon_skill03	增加全体友方{s1Attr4}物理和法术防御，持续5秒（每场战斗只可使用一次）	0	0	0	增加友方物防和法抗	每升一级效果+5%	友方增益	2	0	0	0	0	999	0	0	0	2	1	1	defBase	0	5	1.05&0.05	1	1	wisBase	0	5	1.05&0.05							
+90004	天罚之雷	icon_skill04	全屏雷电，对其中敌人造成{magicDamage}点法术伤害（每场战斗只可使用一次）	0	0	0	大范围法术伤害	每升一级伤害+963	法术伤害	1	1712&963	0	0	0	999	0	0	0	2																			
+90005	毒沼之雾	icon_skill05	全屏毒雾，对其中敌人共造成{s1Attr2}点伤害，持续5秒（每场战斗只可使用一次）	0	0	0	毒雾缭绕，持续5秒	每升一级伤害+1262	持续伤害	2	0	0	0	0	999	0	0	0	2	3	1	5	2054&1262	1														
+90006	蚀骨之冰	icon_skill06	全屏落冰注，对其中敌人造成{magicDamage}点物理伤害，50%概率附带3秒冰冻效果（每场战斗只可使用一次）	0	0	0	物理伤害并冰冻	每升一级伤害+764	物理伤害	0	1500&764	0	0	0	999	0	0	0	1.5	4	1	3																
+91001	战争之王	skill2011	觉醒者降临时嘲讽敌方全体，且自身免疫[59eb01]{s1Attr1}[-]秒	0	0	0	觉醒者降临时嘲讽敌方全体，且自身免疫[59eb01]{s1Attr1}[-]秒		自身增益	2	0	0	0	0	999	999	0	0	2	9	1	1.2&0.2	2	1		7	1	5	1									
+91002	骑士冲击	skill2012	对周围敌方造成[59eb01]（100%攻击+{magicDamage}）[-]物理伤害，击退后眩晕3秒	0	0	0	对周围敌方造成[59eb01]（100%攻击+{magicDamage}）[-]物理伤害，击退后眩晕3秒		物理伤害	0	600&100	1	0	0	3	8	0	10	1	4	1	3																
+91003	疾风之刺	skill2021	觉醒者降临时友方全体攻速增加[59eb01]{s1Attr4}[-]，持续8秒	0	0	0	觉醒者降临时友方全体攻速增加[59eb01]{s1Attr4}[-]，持续8秒		友方增益	2	0	0	0	0	999	99	0	0	2	1	1	attSpeProp	0	8	0.01&0.01													
+91004	诅咒漩涡	skill2022	对前方造成[59eb01]（100%攻击+{magicDamage}）[-]物理伤害，且降低50%物防，持续5秒	0	0	0	对前方造成[59eb01]（100%攻击+{magicDamage}）[-]物理伤害，且降低50%物防，持续5秒		物理伤害	0	750&118	1	0	0	8	8	0	10	2	1	1	defBase	1	5	0.5													
+91005	心火点燃	skill2031	觉醒者降临时友方全体暴击增加[59eb01]{s1Attr4}[-]，持续8秒	0	0	0	觉醒者降临时友方全体暴击增加[59eb01]{s1Attr4}[-]，持续8秒		友方增益	2	0	0	0	0	999	99	0	0	2	1	1	criProp	0	8	0.01&0.01													
+91006	暗夜元素	skill2032	5秒内，对敌方共造成[59eb01]（100%法强+{magicDamage}）[-]法术伤害，且减低50%攻速	0	0	0	5秒内，对敌方共造成[59eb01]（100%法强+{magicDamage}）[-]法术伤害，且减低50%攻速		法术伤害	1	900&141	1	0	0	8	8	0	10	2	1	1	attSpeProp	1	5	-0.5													
+91007	生命守护	skill2041	觉醒者降临时友方全体施加护盾，可吸收[59eb01]{s1Attr2}[-]点伤害	0	0	0	觉醒者降临时友方全体施加护盾，可吸收[59eb01]{s1Attr2}[-]点伤害		友方护盾	2	0	0	0	0	999	99	0	0	2	15	1	10	1200&200	0	2													
+91008	圣言祝福	skill2042	5秒内回复友方[59eb01]（150%法强+{s1Attr2}）[-]血量，并净化和免疫所有负面状态	0	0	0	5秒内回复友方[59eb01]（150%法强+{s1Attr2}）[-]血量，并净化和免疫所有负面状态		全体治疗	2	0	1.5	0	0	999	10	0	10	2	2	1	5	600&80	1	0	8	1											
+																																						
+																																						
+																																						
+																																						
+																					20000																	
