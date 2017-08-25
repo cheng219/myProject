@@ -9,9 +9,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 
-/// <summary>
-/// 整个游戏的控制中心 by 邓成
-/// </summary>
 public class GameCenter : Game
 {
     /// <summary>
@@ -246,7 +243,7 @@ public class GameCenter : Game
 
         initConfig.Add<fsm.EventTransition>(login, (int)EventType.LOGIN);
         initConfig.Add<fsm.EventTransition>(platformLogin, (int)EventType.PLATFORMLOGIN);
-
+        initConfig.Add<fsm.EventTransition>(enterDungeon, (int)EventType.ENTER_DUNGEON);
 
         platformLogin.Add<fsm.EventTransition>(login, (int)EventType.LOGIN);
 
@@ -391,7 +388,7 @@ public class GameCenter : Game
     {
         if (TableMng.intance.LoadFinish)
         {
-            stateMachine.Send((int)EventType.LOGIN);
+            stateMachine.Send((int)EventType.ENTER_DUNGEON);
         }
     }
     #endregion
@@ -549,6 +546,9 @@ public class GameCenter : Game
 
     protected virtual void EnterRunDungeonState(fsm.State _from, fsm.State _to, fsm.Event _event)
     {
+        GameStage stage = stageObj.GetComponent<GameStage>();
+        if (stage != null) Destroy(stage);
+        curGameStage = stageObj.AddComponent<DungeonStage>();
     }
 
     protected virtual void ExitRunDungeonState(fsm.State _from, fsm.State _to, fsm.Event _event)

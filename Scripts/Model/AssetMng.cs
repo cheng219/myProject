@@ -240,8 +240,8 @@ public class AssetMng : MonoBehaviour
             baseURL = "";//GetFilePath("", 1);
             //Debug.LogInternal("资源地址: " + baseURL);
 
-            //SceneLoadUtil sceneLoadUtil = this.GetComponent<SceneLoadUtil>();
-            //if (sceneLoadUtil == null) sceneLoadUtil = this.gameObject.AddComponent<SceneLoadUtil>();
+            SceneLoadMng sceneLoadMng = GetComponent<SceneLoadMng>();
+            if (sceneLoadMng == null) sceneLoadMng = gameObject.AddComponent<SceneLoadMng>();
 
             //GameObject effectAssetFinalObj = new GameObject("EffectAssetFinalObjCache");
             //effectAssetFinalObj.transform.parent = this.transform;

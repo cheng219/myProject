@@ -35,8 +35,6 @@ public class TableMng{
     public void InitAll()
     { 
         InitTable<HeroTable>();
-        HeroTable tab = GetTable(typeof(HeroTable)) as HeroTable;
-        if (tab != null) Debug.Log(tab.infoDic.Count);
     }
 
     protected void InitTable<T>() where T : TableBase,new ()
@@ -96,11 +94,9 @@ public class TableBase
         string[] hList = dataText.Split('\n');
         string tile = hList[1];
         string[] titles = tile.Split('\t');
-        Debug.Log("titles:" + titles.Length);
         for (int i = 2; i < hList.Length; i++)
         {
             string[] line = hList[i].Split('\t');
-            Debug.Log("line:" + line.Length);
             Dictionary<string, string> lineKeyValue = new Dictionary<string, string>();
             for (int j = 0; j < line.Length; j++)
             {
